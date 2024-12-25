@@ -1,0 +1,248 @@
+/* Genel Ayarlar */
+body{
+    font-family: 'Courier New', Courier, monospace; /* Monospace fontu */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+    
+}
+
+/*Navbar Bölümü*/
+.navbar{
+    position: fixed;/*sayfanın en üste sabitler*/
+    top: 0;
+    width: 100%;
+    background-color:black;
+    padding: 10px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;/*yatay liste*/
+    gap: 20px;
+}
+.navbar li{
+    display: inline;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+.navbar a:hover {
+    color: red; /* Üzerine gelince renk değişimi */
+}
+
+
+
+
+/* Giriş Bölümü */
+
+#home{
+    height: 100vh;/* Yükseklik, tarayıcı yüksekliği kadar. */
+    display: flex;/* Merkezleme için esnek kutu düzeni. */
+    justify-content: center;/* Yatayda ortalar. */
+    align-items: center; /* Dikeyde ortalar. */
+    background-color: black;
+    color: #fff;
+    text-align: center;
+}
+
+#home h1{
+    font-size: 3rem;
+    margin: 0;
+}
+
+/* Hakkında Bölümü */
+#about{
+    padding: 50px 20px;/* Bölümün çevresine iç boşluk ekler. */
+    background-color: #fff;
+    text-align: center;
+}
+#about h2{
+    font-size: 2.5rem;
+    color: black;
+}
+#about p{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 20px 0;
+    color: #555;
+}
+
+
+/* İletişim Bölümü */
+
+#contact{
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+#contact h2{
+    font-size: 2.5rem;
+    color:black;
+    text-align: center;
+
+    
+}
+#contact form{
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form label{
+    font-weight: bold;
+
+
+}
+#contact-form input,#contact-form textarea{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    
+}
+
+
+
+#contact-form button{
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#contact-form button:hover{
+    background-color: #333;
+}
+
+/*Footer bölümü*/ 
+
+footer{
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+
+}
+footer ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+footer a{
+    color:#61dafb;
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: solid;
+}
+
+
+footer ul li a{
+    font: 2rem;
+    color: white;
+    transition: transform 0.3s,color 0.3s;
+}
+footer ul li a:hover{
+    transform: scale(3.2);/*hover da büyüme  efekti*/
+    color: white;
+}
+
+
+
+
+
+/*Responsive */
+
+
+
+/* Mobil uyumlu navbar */
+
+
+@media (max-width:768px){
+    .navbar ul{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.navbar a{
+    font-size: 1.2rem;
+    padding: 10px;
+
+}
+
+/* Mobil uyumlu giriş */
+@media (max-width:768px) {
+    #home h1{
+        font-size: 1.5rem;
+    }
+    
+}
+
+/* Hakkında Bölümü */
+@media (max-width: 768px) {
+    #about {
+        padding: 30px 10px; /* Daha dar padding */
+    }
+
+    #about h2 {
+        font-size: 2rem; /* H2 başlığı küçük ekranlar için küçülür */
+    }
+
+    #about p {
+        font-size: 1rem; /* Yazı fontu küçülür */
+    }
+}
+
+
+/* İletişim Formu */
+@media (max-width: 768px) {
+    #contact form {
+        padding: 20px;
+    }
+
+    #contact-form input, #contact-form textarea {
+        font-size: 1rem; /* Mobilde daha küçük font */
+    }
+
+    #contact-form button {
+        width: 100%; /* Butonun tam genişlikte olmasını sağlarız */
+    }
+}
+
+
+/* Footer */
+@media (max-width: 768px) {
+    footer ul {
+        flex-direction: column; /* İkonlar dikey hale gelir */
+        gap: 15px; /* Aralık küçülür */
+    }
+
+    footer ul li a {
+        font-size: 1.5rem; /* İkonların font boyutu küçülür */
+    }
+}
+
+
+
+
+
+
+
+
